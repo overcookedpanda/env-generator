@@ -1,0 +1,6 @@
+# Azure Key Vault and Authentication
+azure-keyvault-secrets>=4.7.0
+azure-identity>=1.15.0
+
+# Environment file parsing
+python-dotenv>=1.0.0

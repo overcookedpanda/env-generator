@@ -1,0 +1,335 @@
+{
+  "vault_name": "kv-my-org-secrets",
+  "vault_name_note": "Azure Key Vault containing secrets for all applications and environments",
+  "applications": {
+    "my-web-app": {
+      "description": "Main web application",
+      "environments": ["dev", "staging", "prod"],
+      "secrets": [
+        {
+          "env_var": "ENV",
+          "vault_key": "environment",
+          "category": "application",
+          "description": "Application environment identifier"
+        },
+        {
+          "env_var": "SERVICE_NAME",
+          "vault_key": "service-name",
+          "category": "application",
+          "description": "Service identifier name"
+        },
+        {
+          "env_var": "APP_VERSION",
+          "vault_key": "app-version",
+          "category": "application",
+          "description": "Application version number"
+        },
+        {
+          "env_var": "LOG_LEVEL",
+          "vault_key": "log-level",
+          "category": "application",
+          "description": "Application logging level"
+        },
+        {
+          "env_var": "DB_HOST",
+          "vault_key": "db-host",
+          "category": "database",
+          "description": "Database host address"
+        },
+        {
+          "env_var": "DB_PORT",
+          "vault_key": "db-port",
+          "category": "database",
+          "description": "Database port number"
+        },
+        {
+          "env_var": "DB_NAME",
+          "vault_key": "db-name",
+          "category": "database",
+          "description": "Database name"
+        },
+        {
+          "env_var": "DB_USER",
+          "vault_key": "db-user",
+          "category": "database",
+          "description": "Database username"
+        },
+        {
+          "env_var": "DB_PASSWORD",
+          "vault_key": "db-password",
+          "category": "database",
+          "description": "Database password"
+        },
+        {
+          "env_var": "AWS_REGION",
+          "vault_key": "aws-region",
+          "category": "aws",
+          "description": "AWS region"
+        },
+        {
+          "env_var": "AWS_ACCESS_KEY_ID",
+          "vault_key": "aws-access-key-id",
+          "category": "aws",
+          "description": "AWS access key for services"
+        },
+        {
+          "env_var": "AWS_SECRET_ACCESS_KEY",
+          "vault_key": "aws-secret-access-key",
+          "category": "aws",
+          "description": "AWS secret access key"
+        },
+        {
+          "env_var": "AWS_S3_BUCKET",
+          "vault_key": "aws-s3-bucket",
+          "category": "aws",
+          "description": "AWS S3 bucket name"
+        },
+        {
+          "env_var": "DYNAMODB_TABLE_NAME",
+          "vault_key": "dynamodb-table-name",
+          "category": "aws",
+          "description": "DynamoDB table name"
+        },
+        {
+          "env_var": "AZURE_STORAGE_CONNECTION_STRING",
+          "vault_key": "azure-storage-connection",
+          "category": "azure",
+          "description": "Azure Storage connection string"
+        },
+        {
+          "env_var": "SERVICEBUS_CONNECTION",
+          "vault_key": "servicebus-connection",
+          "category": "azure",
+          "description": "Azure Service Bus connection string"
+        },
+        {
+          "env_var": "JWT_SECRET_KEY",
+          "vault_key": "jwt-secret-key",
+          "category": "authentication",
+          "description": "JWT signing secret key"
+        },
+        {
+          "env_var": "JWT_ALGORITHM",
+          "vault_key": "jwt-algorithm",
+          "category": "authentication",
+          "description": "JWT signing algorithm"
+        },
+        {
+          "env_var": "API_KEY",
+          "vault_key": "api-key",
+          "category": "authentication",
+          "description": "General API access key"
+        },
+        {
+          "env_var": "AUTH_PROVIDER_CLIENT_ID",
+          "vault_key": "auth-provider-client-id",
+          "category": "authentication",
+          "description": "OAuth provider client ID"
+        },
+        {
+          "env_var": "AUTH_PROVIDER_CLIENT_SECRET",
+          "vault_key": "auth-provider-client-secret",
+          "category": "authentication",
+          "description": "OAuth provider client secret"
+        },
+        {
+          "env_var": "STRIPE_PUBLISHABLE_KEY",
+          "vault_key": "stripe-publishable-key",
+          "category": "external-apis",
+          "description": "Stripe publishable API key"
+        },
+        {
+          "env_var": "STRIPE_SECRET_KEY",
+          "vault_key": "stripe-secret-key",
+          "category": "external-apis",
+          "description": "Stripe secret API key"
+        },
+        {
+          "env_var": "SENDGRID_API_KEY",
+          "vault_key": "sendgrid-api-key",
+          "category": "external-apis",
+          "description": "SendGrid email API key"
+        },
+        {
+          "env_var": "SLACK_WEBHOOK_URL",
+          "vault_key": "slack-webhook-url",
+          "category": "external-apis",
+          "description": "Slack webhook URL for notifications"
+        },
+        {
+          "env_var": "GOOGLE_MAPS_API_KEY",
+          "vault_key": "google-maps-api-key",
+          "category": "external-apis",
+          "description": "Google Maps API key"
+        },
+        {
+          "env_var": "REDIS_URL",
+          "vault_key": "redis-url",
+          "category": "messaging",
+          "description": "Redis connection URL"
+        },
+        {
+          "env_var": "RABBITMQ_URL",
+          "vault_key": "rabbitmq-url",
+          "category": "messaging",
+          "description": "RabbitMQ connection URL"
+        },
+        {
+          "env_var": "KAFKA_BROKERS",
+          "vault_key": "kafka-brokers",
+          "category": "messaging",
+          "description": "Kafka broker endpoints"
+        },
+        {
+          "env_var": "DATADOG_API_KEY",
+          "vault_key": "datadog-api-key",
+          "category": "monitoring",
+          "description": "Datadog API key for monitoring"
+        },
+        {
+          "env_var": "NEW_RELIC_LICENSE_KEY",
+          "vault_key": "newrelic-license-key",
+          "category": "monitoring",
+          "description": "New Relic license key"
+        },
+        {
+          "env_var": "SENTRY_DSN",
+          "vault_key": "sentry-dsn",
+          "category": "monitoring",
+          "description": "Sentry DSN for error tracking"
+        },
+        {
+          "env_var": "SMTP_HOST",
+          "vault_key": "smtp-host",
+          "category": "email",
+          "description": "SMTP server hostname"
+        },
+        {
+          "env_var": "SMTP_PORT",
+          "vault_key": "smtp-port",
+          "category": "email",
+          "description": "SMTP server port"
+        },
+        {
+          "env_var": "SMTP_USER",
+          "vault_key": "smtp-user",
+          "category": "email",
+          "description": "SMTP username"
+        },
+        {
+          "env_var": "SMTP_PASSWORD",
+          "vault_key": "smtp-password",
+          "category": "email",
+          "description": "SMTP password"
+        },
+        {
+          "env_var": "ELASTICSEARCH_URL",
+          "vault_key": "elasticsearch-url",
+          "category": "search",
+          "description": "Elasticsearch cluster URL"
+        },
+        {
+          "env_var": "ELASTICSEARCH_USERNAME",
+          "vault_key": "elasticsearch-username",
+          "category": "search",
+          "description": "Elasticsearch username"
+        },
+        {
+          "env_var": "ELASTICSEARCH_PASSWORD",
+          "vault_key": "elasticsearch-password",
+          "category": "search",
+          "description": "Elasticsearch password"
+        }
+      ]
+    },
+    "api-service": {
+      "description": "Backend API microservice",
+      "environments": ["dev", "staging", "prod"],
+      "secrets": [
+        {
+          "env_var": "ENV",
+          "vault_key": "environment",
+          "category": "application",
+          "description": "Application environment identifier"
+        },
+        {
+          "env_var": "SERVICE_NAME",
+          "vault_key": "service-name",
+          "category": "application",
+          "description": "Microservice name"
+        },
+        {
+          "env_var": "DB_HOST",
+          "vault_key": "db-host",
+          "category": "database",
+          "description": "Database host address"
+        },
+        {
+          "env_var": "DB_PASSWORD",
+          "vault_key": "db-password",
+          "category": "database",
+          "description": "Database password"
+        },
+        {
+          "env_var": "API_KEY",
+          "vault_key": "api-key",
+          "category": "authentication",
+          "description": "Internal API key"
+        },
+        {
+          "env_var": "JWT_SECRET_KEY",
+          "vault_key": "jwt-secret-key",
+          "category": "authentication",
+          "description": "JWT signing secret"
+        },
+        {
+          "env_var": "REDIS_URL",
+          "vault_key": "redis-url",
+          "category": "messaging",
+          "description": "Redis cache URL"
+        }
+      ]
+    },
+    "worker-service": {
+      "description": "Background job processor",
+      "environments": ["dev", "staging", "prod"],
+      "secrets": [
+        {
+          "env_var": "ENV",
+          "vault_key": "environment",
+          "category": "application",
+          "description": "Worker environment"
+        },
+        {
+          "env_var": "QUEUE_URL",
+          "vault_key": "queue-url",
+          "category": "messaging",
+          "description": "Job queue connection URL"
+        },
+        {
+          "env_var": "DB_PASSWORD",
+          "vault_key": "db-password",
+          "category": "database",
+          "description": "Database password"
+        },
+        {
+          "env_var": "AWS_ACCESS_KEY_ID",
+          "vault_key": "aws-access-key-id",
+          "category": "aws",
+          "description": "AWS access key"
+        },
+        {
+          "env_var": "AWS_SECRET_ACCESS_KEY",
+          "vault_key": "aws-secret-access-key",
+          "category": "aws",
+          "description": "AWS secret key"
+        }
+      ]
+    }
+  },
+  "secret_naming_convention": {
+    "pattern": "{app}-{env}-{vault_key}",
+    "example": "my-web-app-dev-db-password",
+    "description": "Secrets in Key Vault follow the pattern: application-environment-secret-key"
+  }
+}
